@@ -100,7 +100,7 @@
         margin-left: 5%;
         width: 90%;
     }
-    .it1 h1{
+    .it1 h2{
         margin-left: 10px;
         margin-right: 10px;
         color: #001e62;
@@ -256,7 +256,7 @@
     .it2{
         width: 100%;
     }
-    .it1 h1{
+    .it1 h2{
         margin-left: 10px;
         margin-right: 10px;
         color: #001e62;
@@ -407,7 +407,7 @@
     .it2{
         width: 100%;
     }
-    .it1 h1{
+    .it1 h2{
         margin-top: 20%;
         color: #001e62;
         font-weight: bold;
@@ -556,7 +556,10 @@
     .it2{
         width: 100%;
     }
-    .it1 h1{
+    h1{
+        display: none;
+    }
+    .it1 h2{
         color: #001e62;
         font-weight: bold;
         font-family: Arial, Helvetica, sans-serif;
@@ -699,7 +702,7 @@
     float: right;
     width: 50%;
 }
-.it1 h1{
+.it1 h2{
     margin-left: 55%;
     margin-top: 20%;
     float: left;
@@ -851,7 +854,7 @@
       float: right;
       width: 50%;
   }
-  .it1 h1{
+  .it1 h2{
       margin-left: 55%;
       margin-top: 20%;
       float: left;
