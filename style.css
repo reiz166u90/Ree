@@ -1,5 +1,12 @@
 
 @media only screen and (max-width: 256px){
+    .it1 p{
+        display: none;
+    }
+    .it1 input{
+        display: none;
+    }
+    
     h1{
         display: none;
     }
@@ -82,7 +89,7 @@
         margin-top: 20px;
         text-decoration: none;
     }
-    .flex p{
+    .flex h3{
         margin-left: 20px;
         margin-right: 20px;
         margin-bottom: 20px;
@@ -120,7 +127,7 @@
         font-family: Arial, Helvetica, sans-serif;
         font-size: 0.5cm;
     }
-    .it2 p{
+    .it2 h4{
         margin-left: 10px;
         margin-right: 10px;
         margin-top: 10%;
@@ -152,7 +159,7 @@
     .footer-2 img{
         margin-left: 5%;
     }
-    .footer-2 p{
+    .footer-2 h5{
         margin-top: 30px;
         color: #001e62;
         font-weight: 100;
@@ -160,6 +167,13 @@
     }  
 }
 @media only screen and (max-width: 480px) and (min-width: 257px){
+    .it1 p{
+        display: none;
+    }
+    .it1 input{
+        display: none;
+    }
+    
     h1{
         display: none;
     }
@@ -243,7 +257,7 @@
         margin-top: 20px;
         text-decoration: none;
     }
-    .flex p{
+    .flex h3{
         margin-left: 20px;
         margin-right: 20px;
         margin-bottom: 20px;
@@ -279,7 +293,7 @@
         font-family: Arial, Helvetica, sans-serif;
         font-size: 0.5cm;
     }
-    .it2 p{
+    .it2 h4{
         margin-left: 10px;
         margin-right: 10px;
         color: #001e62;
@@ -309,7 +323,7 @@
         margin-top: 10px;
         margin-left: 10%;
     }
-    .footer-2 p{
+    .footer-2 h5{
         margin-top: 30px;
         color: #001e62;
         font-weight: 200;
@@ -318,6 +332,13 @@
     }
 }
 @media only screen and (max-width: 768px) and (min-width: 481px){
+    .it1 p{
+        display: none;
+    }
+    .it1 input{
+        display: none;
+    }
+    
     h1{
         display: none;
     }
@@ -398,7 +419,7 @@
         margin-top: 20px;
         text-decoration: none;
     }
-    .flex p{
+    .flex h3{
         margin-left: 20px;
         margin-right: 20px;
         color: #001e62;
@@ -430,7 +451,7 @@
         font-family: Arial, Helvetica, sans-serif;
         font-size: 0.5cm;
     }
-    .it2 p{
+    .it2 h4{
         color: #001e62;
         font-weight: 400;
         font-family: Arial, Helvetica, sans-serif;
@@ -457,7 +478,7 @@
         margin-left: 20px;
         margin-left: 15%;
     }
-    .footer-2 p{
+    .footer-2 h5{
         margin-top: 30px;
         color: #001e62;
         margin-left: 30%;
@@ -466,6 +487,13 @@
     }
 }
 @media only screen and (min-width: 769px) and (max-width:1023px){
+    .it1 p{
+        display: none;
+    }
+    .it1 input{
+        display: none;
+    }
+    
     h1{
         display: none;
     }
@@ -544,7 +572,7 @@
         margin-top: 70px;
         text-decoration: none;
     }
-    .flex p{
+    .flex h3{
         margin-left: 20px;
         margin-right: 20px;
         margin-bottom: 150px;
@@ -581,7 +609,7 @@
         font-family: Arial, Helvetica, sans-serif;
         font-size: 0.5cm;
     }
-    .it2 p{
+    .it2 h4{
         color: #001e62;
         font-weight: 400;
         font-family: Arial, Helvetica, sans-serif;
@@ -606,7 +634,7 @@
         margin-top: 10px;
         margin-left:15%;
     }
-    .footer-2 p{
+    .footer-2 h5{
         margin-left:30%;
         color: #001e62;
         font-weight: 300;
@@ -614,6 +642,13 @@
     }
 }
 @media only screen and (min-width: 1024px) and (max-width:1280px){
+    .it1 p{
+        display: none;
+    }
+    .it1 input{
+        display: none;
+    }
+    
     h1{
         display: none;
     }
@@ -692,7 +727,7 @@
     margin-top: 70px;
     text-decoration: none;
 }
-.flex p{
+.flex h3{
     margin-left: 20px;
     margin-right: 20px;
     margin-bottom: 150px;
@@ -731,7 +766,7 @@
     font-family: Arial, Helvetica, sans-serif;
     font-size: 0.5cm;
 }
-.it2 p{
+.it2 h4{
     margin-right: 40%;
     margin-top: 20%;
     float: right;
@@ -760,7 +795,7 @@
     margin-top: 10px;
     margin-left: 20px;
 }
-.footer-2 p{
+.footer-2 h5{
     margin-top: 30px;
     color: #001e62;
     margin-right: 40%;
@@ -769,6 +804,13 @@
 }  
 }
 @media only screen and (min-width: 1280px){
+    .it1 p{
+        display: none;
+    }
+    .it1 input{
+        display: none;
+    }
+    
     h1{
         display: none;
     }
@@ -847,7 +889,7 @@
       margin-top: 70px;
       text-decoration: none;
   }
-  .flex p{
+  .flex h3{
       margin-left: 20px;
       margin-right: 20px;
       margin-bottom: 150px;
@@ -886,7 +928,7 @@
       font-family: Arial, Helvetica, sans-serif;
       font-size: 0.5cm;
   }
-  .it2 p{
+  .it2 h4{
       margin-right: 40%;
       margin-top: 20%;
       float: right;
@@ -918,7 +960,7 @@
       margin-top: 10px;
       margin-left: 20px;
   }
-  .footer-2 p{
+  .footer-2 h5{
       margin-top: 30px;
       color: #001e62;
       float: right;
