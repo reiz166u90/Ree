@@ -963,6 +963,22 @@
       font-size: 0.4cm;
   }  
   }
+  .Ree{
+    color: white;
+    border-radius: 10px;
+    margin-left: 3px;
+    text-align: center;
+    padding: 3px;
+    font-size: 0.7cm;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #00DBDE;
+    background-image: linear-gradient(90deg, #00DBDE 0%, #FC00FF 100%);
+    position: fixed;
+    bottom: 2px;
+    right: 2px;
+    width: 120px;
+  }
 
 
 
