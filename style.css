@@ -1,8 +1,4 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
+
 @media only screen and (max-width: 256px){
     h1{
         display: none;
@@ -573,10 +569,6 @@
     .it2{
         width: 100%;
     }
-    .it1 h1{
-        font-size: 0.1;
-        display: none;
-    }
     .it1 h2{
         color: #001e62;
         font-weight: bold;
@@ -930,9 +922,9 @@
       margin-top: 30px;
       color: #001e62;
       float: right;
-      margin-right: 50%;
+      margin-right: 40%;
       font-weight: 100;
-      font-size: 0.4zcm;
+      font-size: 0.4cm;
   }  
   }
 
