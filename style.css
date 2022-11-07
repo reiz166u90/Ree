@@ -966,10 +966,9 @@
   .Ree{
     color: white;
     border-radius: 10px;
-    margin-left: 3px;
     text-align: center;
-    padding: 3px;
-    font-size: 0.7cm;
+    padding: 2px;
+    font-size: 0.6cm;
     font-weight: bold;
     font-family: 'Times New Roman', Times, serif;
     background-color: #00DBDE;
