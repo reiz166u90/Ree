@@ -1,4 +1,12 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
 @media only screen and (max-width: 256px){
+    h1{
+        display: none;
+    }
     .menu{
         width: 100%;
         position: sticky;
@@ -156,6 +164,9 @@
     }  
 }
 @media only screen and (max-width: 480px) and (min-width: 257px){
+    h1{
+        display: none;
+    }
     .menu{
         width: 100%;
         position: sticky;
@@ -311,6 +322,9 @@
     }
 }
 @media only screen and (max-width: 768px) and (min-width: 481px){
+    h1{
+        display: none;
+    }
     .menu{
         width: 100%;
         position: sticky;
@@ -456,6 +470,9 @@
     }
 }
 @media only screen and (min-width: 769px) and (max-width:1023px){
+    h1{
+        display: none;
+    }
     .menu{
         width: 100%;
         position: sticky;
@@ -556,7 +573,8 @@
     .it2{
         width: 100%;
     }
-    h1{
+    .it1 h1{
+        font-size: 0.1;
         display: none;
     }
     .it1 h2{
@@ -604,7 +622,10 @@
     }
 }
 @media only screen and (min-width: 1024px) and (max-width:1280px){
-  .menu{
+    h1{
+        display: none;
+    }
+    .menu{
     width: 90%;
     position: sticky;
     top: 0;
@@ -756,6 +777,9 @@
 }  
 }
 @media only screen and (min-width: 1280px){
+    h1{
+        display: none;
+    }
     .menu{
       width: 100%;
       position: sticky;
