@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        document.getElementById("end").style.display = 'none';
+        function hide_show(){
+            document.getElementById("start").style.display = 'none';
+            document.getElementById("end").style.display = 'none';
+            document.getElementById("end").style.display = 'block';
+            // document.getElementById("start").style.visibility = "hidden";    
+            document.getElementById("end").style.visibility = "visible";
+        }
+        function undo_show_hide(){
+            document.getElementById("end").style.display = 'none';
+            document.getElementById("start").style.display = 'block';
+            document.getElementById("start").style.visibility = "visible";
+        }
+
+        function Log_in(){
+            document.getElementById("end").style.display = 'none';
+            document.getElementById("start").style.display = 'none';
+            document.getElementById("end").style.display = 'block';
+            document.getElementById("start").style.display = 'block';
+            document.getElementById("start_1").style.visibility = "visible";
+        }
+        
+    </script>
+    <style>
+        .end{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container start" id="start">
+        <div class="row">
+            <div class="col-sm">
+                <div id="circle"></div>
+                <div id="circle1"></div>
+            </div>
+            <div class="col-sm button">
+                <img src="img/logo.png" alt="#" width="80%">
+                <div class="line w-100"></div>
+                <button class="btn c-form__buttonLabel" onclick="hide_show()">Оюутны эрхээр нэвтрэх</button>
+                <button class="btn">Клубын эрхээр нэвтрэх</button>
+                <a href="sign_up.html" class="sign_in"><center>Шинээр бүртгүүлэх</center> </a>
+            </div>
+            <div class="col-sm"></div>
+        </div>
+    </div>
+
+    <div class="container end" id="end">
+        <div class="row">
+            <div class="col-sm">
+                <div id="circle"></div>
+                <div id="circle1"></div>
+            </div>
+            <div class="col-sm">
+                <center><img src="img/Capture-removebg-preview (1).png" alt=""></center>
+                <div class="end_1">
+                    <input type="text" id="inp_1" placeholder="Хэрэглэгчийн нэр:">
+                    <br><br>
+                    <input type="text" id="inp_1" placeholder="Нууц үг:">
+                    <br>
+                    <a href="#" class="sign_in">Нууц үг сэргээх</a>
+                    <button class="btn" onclick="Log_in()"><a href="log_in.html">Нэвтрэх</a></button>
+                    <button class="btn" onclick="undo_show_hide()">Буцах</a> </button>
+                </div>
+            </div>
+            <div class="col-sm"></div>
+        </div>
+    </div>
+</body>
+</html>
