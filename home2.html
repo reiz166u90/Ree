@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <style>
+        *{
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        }
+        body{
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(124.02deg, #E0B2E8 6.63%, rgba(167, 173, 249, 0) 91.8%);
+        }
+        @import url('https://fonts.googleapis.com/css?family=Signika');
+        *, ::before, ::after {
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0;
+            overflow:hidden ;   /* cursor hide hiitsn */
+          
+            display: flex;
+            line-height: 1.5;
+            font-family: 'Signika', cursive;
+            font-weight: 300;
+            color: black;
+        }
+        a {
+            text-decoration: none;
+            color: #3369e7;
+        }
+        #check {
+            display: none;
+        }
+        #check + label {
+            position: absolute;
+            top: 1em;
+            left: 1em;
+            z-index: 1;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+        #check + label::before {
+            position: absolute;
+            content: '';
+            top: -1em;
+            left: -1em;
+            width: 100vw;
+            height: 100vh;
+            transform-origin: 50% 50%;
+            transform: scale(1.3);
+            visibility: hidden;
+            opacity: 0;
+            transition: all 250ms linear;
+        }
+        #check + label svg {
+            margin-right: 0.5em;
+        }
+        #check + label svg path {
+            transform-origin: 35% 50%;
+            transition:  166.6666666667ms cubic-bezier(0.06, 0.63, 0.91, 0.66);
+        }
+        #check:checked + label ~ aside {
+            transform: none;
+        }
+        #check:checked + label::before {
+            left: calc(25vw - 1em);
+            transform: scale(1);
+            visibility: visible;
+            opacity: 1;
+        }
+        @media (max-width: 576px) {
+            #check:checked + label::before {
+                left: calc(50vw - 1em);
+            }
+        }
+        #check:checked + label svg #one {
+            transform: rotate(45deg);
+        }
+        #check:checked + label svg #two {
+            transform: rotate(-45deg);
+        }
+        #check:checked + label ~ article {
+            z-index: -1;
+            transform: translateX(25vw) scale(0.7);
+            border-radius: 0.25em;
+            user-select: none;
+            pointer-events: none;
+        }
+        aside, article {
+            padding: 2.5em 1em 0.25em;
+            transition: all 250ms cubic-bezier(0.06, 0.63, 0.91, 0.66);
+        }
+        aside {
+            position: absolute;
+            width: 20vw;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            background-color: rgb(255, 255, 255, 0.2);
+            transform: translateX(-100%);
+        }
+        @media (max-width: 576px) {
+            aside {
+                width: 30vw;
+            }
+        }
+        article {
+            position: relative;
+            transform-origin: 10% 50%;
+            width: 100%;
+            background-color: rgb(255, 255, 255, 0.4);
+        }
+        article .wrapper {
+            
+            margin: auto;
+            padding: 3em;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        article .wrapper h1 {
+            margin: 0;
+        }
+        article .wrapper .footer {
+            text-align: right;
+        }
+        #p{
+            max-width: 80%;
+            padding: 2rem;
+        }
+        span{
+            font-weight: bold;
+        }
+        img{
+            background-color: #E0B2E8;
+            padding: 1rem;
+            border-radius: 30px;
+        }
+        .text{
+            padding: 5rem;
+            border-radius: 20px;
+            background: #FFEADF;
+        }
+        li{
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-sm">
+        <input type="checkbox" id="check"/>
+        <label for="check">
+            <svg viewBox="0 0 30 30" width="30" height="30">
+                <path id="one" d="M4 10h22M4" stroke="#fff" stroke-width="2" stroke-linecap="round"></path>
+                <path id="two" d="M4 20h22M4" stroke="#fff" stroke-width="2" stroke-linecap="round"></path>
+            </svg>
+        </label>
+        <aside>
+            <div class="top">
+                <br>
+                <h2>&nbsp; MClub</h2><br>
+                <ul>
+                    <li><a href="home.html" class="btn">Бидний тухай</a></li>
+                    <li><a href="home1.html" class="btn">Системийн боломжууд</a></li>
+                    <li><a href="home2.html" class="btn">Төлбөр</a></li>
+                    <li><a href="home3.html" class="btn">Бидэнтэй холбогдох</a></li>
+                    <li><a href="home4.html" class="btn">Их сургуулиууд</a></li>
+                </ul>
+            </div>
+            <div class="bottom">
+                <p>&copy; B & M & P </p>
+            </div> 
+        </aside>
+        <article>
+            <div class="wrapper">
+                <div class="content"><br><br>
+                    <h1><center>Төлбөр</center> </h1><br><br>
+                    <br>
+                    <div class="row">
+                       <div class="col-sm text-dark  m-4 text">
+                        <h1>Free</h1>
+                        <ul>
+                            <li>Клубын мэдээлэл</li>
+                            <li>Их сургуулиудыг холбосон харилцах систем</li>
+                            <li>Клубын танилцуулга болсон 1 хичээл</li>
+                        </ul>
+                       </div>
+                       <div class="col-sm  text-dark m-4 text ">
+                        <h1>Club</h1>
+                        <ul>
+                            <li>Клубээ байрлуулах</li>
+                            <li>Үйл ажиллагааны мэдээллээ оруулах</li>
+                            <li>Бусад сургуулиудад таниулах</li>
+                            <li>Бусад клубтэй өрсөлдөх</li>
+                            <li>Гишүүнчлэлээ элсүүлэх</li>
+                        </ul>
+                       </div>
+                       <div class="col-sm text-dark m-4 text">
+                        <h1>University</h1>
+                        <ul>
+                            <li>Их сургуулиудын клубын үйл ажиллагааг сайжруулах</li>
+                            <li>Боловсролыг тэгш хүртээх</li>
+                            <li>Оюутнуудын чөлөөт цагаараа хийж байгаа үйл ажиллагааг хянах</li>
+                        </ul>
+                       </div>
+                    </div>
+                    <br><br>
+                    </div>
+                    <div class="footer">
+                    </div>
+            </div>
+        </article>
+    </div>
+</body>
+</html>
