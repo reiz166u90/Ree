@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="icon" href="img/logo.png"  type="image/gif" sizes="16x16">
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100vh;
+            background: #D3C8EB;
+        }  
+        #circle {
+            position: absolute;
+            background: lightblue;
+            border-radius: 50%;
+            width: 10%;
+            height: 20vh;
+            top: -10%;
+            left: 0%;
+        }
+        #circle1{
+            position: absolute;
+            background: rgba(125, 252, 252, 0.47);
+            border-radius: 50%;
+            width: 10%;
+            height: 20vh;
+            left: -5%;
+        }
+        .col-sm{
+            position: static;
+        }
+        .btn{
+            padding-top: 10px;
+            width: 40%;
+            height: 50px;
+            background: #FFFFFF;
+            border: 2px solid #7452FF;
+            box-shadow: 0px 3px 0px #7452FF;
+            border-radius: 10px;
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 21px;
+            line-height: 25px;
+            color: #333333;
+            margin-top: 20px;
+        }
+        .button{
+            margin-top: 50px;
+            display: flex;
+            justify-content: center;
+            justify-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            align-items: center;
+        }
+        .line{
+            height: 15vh;
+        }
+        input{
+            border: 1px solid blanchedalmond;
+            width: 395px;
+            height: 46px;
+            left: 11px;
+            top: 248px;
+            background: #D9D9D9;
+            mix-blend-mode: soft-light;
+            border-radius: 46px;
+        }
+        h1{
+            margin-top: 40px;
+            font-family: 'Roboto Serif';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 30px;
+            line-height: 29px;
+            color: #000000;
+        }
+        a{
+            color: #333333;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm">
+                <div id="circle"></div>
+                <div id="circle1"></div>
+            </div>
+            <div class="col-sm button">
+                <h1>Шинээр бүртгүүлэх хэсэг</h1>
+                <input type="text" placeholder="&nbsp;&nbsp;&nbsp;Хэрэглэгчийн нэр">
+                <input type="text" placeholder="&nbsp;&nbsp;&nbsp;Нууц үг">
+                <input type="text" placeholder="&nbsp;&nbsp;&nbsp;Нууц үг баталгаажуулах">
+                <input type="email" placeholder="&nbsp;&nbsp;&nbsp;email">
+                <input type="number" placeholder="&nbsp;&nbsp;&nbsp;Утасны дугаар">
+                <input type="text" placeholder="&nbsp;&nbsp;&nbsp;Их сургууль">
+                <input type="text" placeholder="&nbsp;&nbsp;&nbsp;Оюутны код">
+                <button class="btn"><a href="index.html">Буцах</a> </button>&nbsp;&nbsp;&nbsp;
+                <a href="index.html" class="btn">Бүртгүүлэх</a>
+            </div>
+            <div class="col-sm"></div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <style>
+        *{
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        }
+        body{
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(124.02deg, #E0B2E8 6.63%, rgba(167, 173, 249, 0) 91.8%);
+        }
+        @import url('https://fonts.googleapis.com/css?family=Signika');
+        *, ::before, ::after {
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0;
+            overflow:hidden ;   /* cursor hide hiitsn */
+          
+            display: flex;
+            line-height: 1.5;
+            font-family: 'Signika', cursive;
+            font-weight: 300;
+            color: black;
+        }
+        a {
+            text-decoration: none;
+            color: #3369e7;
+        }
+        #check {
+            display: none;
+        }
+        #check + label {
+            position: absolute;
+            top: 1em;
+            left: 1em;
+            z-index: 1;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+        #check + label::before {
+            position: absolute;
+            content: '';
+            top: -1em;
+            left: -1em;
+            width: 100vw;
+            height: 100vh;
+            transform-origin: 50% 50%;
+            transform: scale(1.3);
+            visibility: hidden;
+            opacity: 0;
+            transition: all 250ms linear;
+        }
+        #check + label svg {
+            margin-right: 0.5em;
+        }
+        #check + label svg path {
+            transform-origin: 35% 50%;
+            transition:  166.6666666667ms cubic-bezier(0.06, 0.63, 0.91, 0.66);
+        }
+        #check:checked + label ~ aside {
+            transform: none;
+        }
+        #check:checked + label::before {
+            left: calc(25vw - 1em);
+            transform: scale(1);
+            visibility: visible;
+            opacity: 1;
+        }
+        @media (max-width: 576px) {
+            #check:checked + label::before {
+                left: calc(50vw - 1em);
+            }
+        }
+        #check:checked + label svg #one {
+            transform: rotate(45deg);
+        }
+        #check:checked + label svg #two {
+            transform: rotate(-45deg);
+        }
+        #check:checked + label ~ article {
+            z-index: -1;
+            transform: translateX(25vw) scale(0.7);
+            border-radius: 0.25em;
+            user-select: none;
+            pointer-events: none;
+        }
+        aside, article {
+            padding: 2.5em 1em 0.25em 0em;
+            transition: all 250ms cubic-bezier(0.06, 0.63, 0.91, 0.66);
+        }
+        aside {
+            position: absolute;
+            width: 20vw;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            background-color: rgb(255, 255, 255, 0.2);
+            transform: translateX(-100%);
+        }
+        @media (max-width: 576px) {
+            aside {
+                width: 30vw;
+            }
+        }
+        article {
+            position: relative;
+            transform-origin: 10% 50%;
+            width: 100%;
+            background-color: rgb(255, 255, 255, 0.4);
+        }
+        li{
+            display: block;
+        }
+        article .wrapper {
+            margin: auto;
+            padding: 8em;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        article .wrapper h1 {
+            margin: 0;
+        }
+        article .wrapper .footer {
+            text-align: right;
+        }
+        h1{
+            text-align: center;
+        }
+        @media screen and (max-width: 768px) {
+            body {
+                overflow:visible;
+            }
+        }
+    </style>
+    <link rel="icon" href="img/logo.png"  type="image/gif" sizes="16x16">
+</head>
+<body>
+    <div class="container-fluid pl-0">
+        <input type="checkbox" id="check"/>
+        <label for="check">
+            <svg viewBox="0 0 30 30" width="30" height="30">
+                <path id="one" d="M4 10h22M4" stroke="#fff" stroke-width="2" stroke-linecap="round"></path>
+                <path id="two" d="M4 20h22M4" stroke="#fff" stroke-width="2" stroke-linecap="round"></path>
+            </svg>
+        </label>
+        <aside class="" style="padding-top: 50px;">
+            <div class="top">
+                <h2 class="navbar">&nbsp; MClub</h2>
+                <nav class="navbar">
+                   <a href="undsen_tses.html"class="btn nav-item nav-link">Үндсэн Цэс</a>
+                    <a href="busadclub.html" class="btn nav-item nav-link">Бусад клубууд</a>
+                    <a href="miniiclub.html" class="btn nav-item nav-link">Миний клуб</a>
+                    <a href="#" class="w-100"></a>
+                    <a href="medegdel.html" class="btn nav-item nav-link">Мэдэгдэл</a>
+                    <a href="miniituluwluguu.html" class="btn nav-item nav-link">Миний төлөвлөгөө</a>
+                    <a href="uilajillagaa.html" class="btn nav-item nav-link">Үйл ажиллагаа</a>
+                    <a href="#" class="btn nav-item nav-link">Амжилтууд</a>
+                    <a href="#" class="w-100"></a>
+                    <a href="#" class="btn nav-item nav-link">Чат</a>
+                    <a href="#" class="w-100"></a>
+                    <a href="#" class="btn nav-item nav-link">Тохиргоо</a>
+                </nav>
+            </div>
+            <div class="bottom">
+                <p>&copy; B & M & P </p>
+            </div> 
+        </aside>
+        <nav class="navbar navbar-expand-lg navbar-light font-weight-bold d-flex flex-row-reverse" style="background-color: rgb(255, 255, 255, 0.5);">
+            <div class="" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                <a class="nav-item nav-link mr-4" href="home.html">Бидний тухай</a>
+                <a class="nav-item nav-link mr-4" href="home1.html">Системийн боломжууд</a>
+                <a class="nav-item nav-link mr-4" href="home2.html">Төлбөр</a>
+                <a class="nav-item nav-link mr-4" href="home3.html">Бидэнтэй холбогдох</a>
+                <a class="nav-item nav-link mr-4" href="home4.html">Их сургуулиууд</a>
+            </div>
+            </div>
+        </nav>
+        <article>
+            <div class="wrapper">
+                <div class="content">
+                    <h1>Системийн боломжууд</h1><br><br>
+                    <div class="row">       
+                        <div class="col-sm"></div>
+                        <div class="col-sm text">
+                            <p>1. Монгол улсын их сургуулиудын бүх клубуудтэй оюутнууд хамтарч ажиллах боломж</p>
+                            <p>2. Их сургуулиуд чадварлаг боловсон хүчин бүрийг дэмжих,хөгжүүлэх</p>
+                                <p>3. Оюутан бүр чөлөөт цагаа боловсон өнгөрөөх боломж</p>
+                                <p>4. Клубуудын өрсөлдөх чадварыг нэмэх</p>
+                                <p>5. Харилцагчийн систем</p>
+                                <p>6. Чатаар харилцах боломж</p>
+                        </div>
+                    </div>
+                    <div class="footer">
+                    </div>
+            </div>
+        </article>
+    </div>
+</body>
+</html>

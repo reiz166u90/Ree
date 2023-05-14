@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        body{
+            overflow: hidden;
+        }
+        #check {
+            display: none;
+        }
+        #check + label {
+            position: absolute;
+            top: 1em;
+            left: 1em;
+            z-index: 1;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+        #check + label::before {
+            position: absolute;
+            content: '';
+            top: -1em;
+            left: -1em;
+            width: 100vw;
+            height: 100vh;
+            transform-origin: 50% 50%;
+            transform: scale(1.3);
+            visibility: hidden;
+            opacity: 0;
+            transition: all 250ms linear;
+        }
+        #check + label svg {
+            margin-right: 0.5em;
+        }
+        #check + label svg path {
+            transform-origin: 35% 50%;
+            transition:  166.6666666667ms cubic-bezier(0.06, 0.63, 0.91, 0.66);
+        }
+        #check:checked + label ~ aside {
+            transform: none;
+        }
+        #check:checked + label::before {
+            left: calc(25vw - 1em);
+            transform: scale(1);
+            visibility: visible;
+            opacity: 1;
+        }
+        @media (max-width: 576px) {
+            #check:checked + label::before {
+                left: calc(50vw - 1em);
+            }
+        }
+        #check:checked + label svg #one {
+            transform: rotate(45deg);
+        }
+        #check:checked + label svg #two {
+            transform: rotate(-45deg);
+        }
+        #check:checked + label ~ article {
+            z-index: -1;
+            transform: translateX(25vw) scale(0.7);
+            border-radius: 0.25em;
+            user-select: none;
+            pointer-events: none;
+        }
+        aside, article {
+            padding: 2.5em 1em 0.25em;
+            transition: all 250ms cubic-bezier(0.06, 0.63, 0.91, 0.66);
+        }
+        aside {
+            position: absolute;
+            width: 20vw;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            background-color: rgb(255, 255, 255, 0.5);
+            transform: translateX(-100%);
+        }
+        @media (max-width: 576px) {
+            aside {
+                width: 30vw;
+            }
+        }
+        a{
+            text-decoration: none;
+        }
+        li{
+            display: block;
+        }
+        @media screen and (max-width: 768px) {
+            body {
+                overflow:visible;
+            }
+        }
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }   
+        .btn1{
+            margin-left: 70%;
+            height: 40px;
+            padding: 3px;
+            background: #FFFFFF;
+            border: 2px solid #7452FF;
+            box-shadow: 0px 3px 0px #7452FF;
+            border-radius: 10px;
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 20px;
+            color: #333333;
+        }
+    </style>
+     <script>
+        function displayTime() {
+            var currentTime = new Date();
+            var hours = currentTime.getHours();
+            var minutes = currentTime.getMinutes();
+            var seconds = currentTime.getSeconds();
+
+            // Add leading zeros if the values are less than 10
+            hours = (hours < 10 ? "0" : "") + hours;
+            minutes = (minutes < 10 ? "0" : "") + minutes;
+            seconds = (seconds < 10 ? "0" : "") + seconds;
+
+            // Create a string for the display
+            var timeString = hours + ":" + minutes + ":" + seconds;
+
+            // Set the text content of the clock element
+            document.getElementById("clock").textContent = timeString;
+        }
+
+        // Refresh the clock display every second
+        setInterval(displayTime, 1000);
+    </script>
+</head>
+<body class="overflow:hidden;">
+    <div class="container-md" style="background: linear-gradient(124.02deg, #E0B2E8 6.63%, rgba(167, 173, 249, 0) 91.8%); height: 100vh;">
+        <input type="checkbox" id="check"/>
+        <label for="check">
+            <svg viewBox="0 0 30 30" width="30" height="30">
+                <path id="one" d="M4 10h22M4" stroke="#fff" stroke-width="2" stroke-linecap="round"></path>
+                <path id="two" d="M4 20h22M4" stroke="#fff" stroke-width="2" stroke-linecap="round"></path>
+            </svg>
+        </label>
+        <aside class="" style="padding-top: 50px;">
+            <div class="top">
+                <h2 class="navbar">&nbsp; MClub</h2>
+                <nav class="navbar">
+                   <a href="#" class="btn nav-item nav-link">Үндсэн Цэс</a>
+                    <a href="#" class="btn nav-item nav-link">Бусад клубууд</a>
+                    <a href="#" class="btn nav-item nav-link">Миний клуб</a>
+                    <a href="#" class="btn nav-item nav-link">Миний төлөвлөгөө</a>
+                    <a href="#" class="btn nav-item nav-link">Үйл ажиллагаа</a>
+                    <a href="#" class="btn nav-item nav-link">Амжилтууд</a>
+                    <a href="#" class="w-100"></a>
+                    <a href="#" class="btn nav-item nav-link">Чат</a>
+                    <a href="#" class="w-100"></a>
+                    <a href="#" class="btn nav-item nav-link">Тохиргоо</a>
+                </nav>
+            </div>
+            <div class="bottom">
+                <p>&copy; B & M & P </p>
+            </div> 
+        </aside>
+        <nav class="navbar navbar-expand-lg navbar-light font-weight-bold d-flex flex-row-reverse" style="background-color: rgb(255, 255, 255, 0.5);">
+            <div class="" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                <a class="nav-item nav-link mr-4" href="#">Бидний тухай</a>
+                <a class="nav-item nav-link mr-4" href="#">Системийн боломжууд</a>
+                <a class="nav-item nav-link mr-4" href="#">Төлбөр</a>
+                <a class="nav-item nav-link mr-4" href="#">Бидэнтэй холбогдох</a>
+                <a class="nav-item nav-link mr-4" href="#">Их сургуулиууд</a>
+            </div>
+            </div>
+        </nav>
+        <article>
+            <div class="wrapper">
+                <div class="content">
+                    <div class="row">
+                        <div class="col-sm-2"></div>
+                        <div class="col-sm-8">
+                            <center>
+                            <h1 style="">MClub-ээс зохиох уралдаан, тэмцээн</h1></center><br>
+                            <div class="" style="margin-left: 10%; width: 80%; height: 500px; border-radius: 20px; background-color: white; padding-left: 5%; padding-top: 5%;">
+                                <img src="img/qwerty.PNG" alt="" width="90%" height="90%" >
+                            </div>
+                        </div>
+                        <div class="col-sm-2"></div>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </div>
+</body>
+</html>
